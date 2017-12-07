@@ -58,25 +58,28 @@
 
   {{ page.help }}
 
-  <main role="main">
-    <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
+  <main class="uikit-grid" role="main">
+    <div class="container">
+      <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+      <div class="row">
+        <div class="layout-content grids col-sm-12">
+          {{ page.content }}
+        </div>{# /.layout-content #}
+      </div>
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+    </div>
   </main>
 
   {% if page.footer %}
