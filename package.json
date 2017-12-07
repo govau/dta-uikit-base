@@ -1,0 +1,44 @@
+{
+  "name": "govcms8-ui",
+  "version": "1.0.0",
+  "description": "Base theme for govCMS8",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^7.1.6",
+    "browser-sync": "^2.18.13",
+    "cssnano": "^3.10.0",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-casperjs": "0.0.7",
+    "gulp-concat": "^2.6.1",
+    "gulp-iconfont": "^9.0.2",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-iconfont-template": "0.0.3",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-pa11y": "0.0.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-real-favicon": "^0.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-w3c-html-validation": "0.0.1",
+    "jshint": "^2.9.5",
+    "postcss-import": "^11.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govcms/govCMS8-ui.git"
+  },
+  "author": "govCMS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/govcms/govCMS8-ui/issues"
+  },
+  "homepage": "https://github.com/govcms/govCMS8-ui#readme"
+}
