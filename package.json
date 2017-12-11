@@ -35,6 +35,7 @@
     "@gov.au/header": "^1.2.0",
     "@gov.au/inpage-nav": "^0.3.0",
     "@gov.au/link-list": "^0.3.0",
+    "@gov.au/page-alerts": "^0.3.0",
     "@gov.au/skip-link": "^0.3.0"
   },
   "scripts": {
