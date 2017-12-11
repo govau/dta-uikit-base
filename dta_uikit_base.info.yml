@@ -3,6 +3,7 @@ type: theme
 description: This is a base theme designed to provide a suitable basis for building Drupal 8 websites using the Digital Transformation Agency's UI Kit. Please implement a sub theme 'underneath' this theme to add your own styles to a site.
 core: 8.x
 base theme: stable
+screenshot: screenshot.png
 libraries:
   - dta_uikit_base/global-styling
 regions:
