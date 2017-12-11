@@ -1,7 +1,8 @@
 {#
 /**
  * @file
- * Theme override to display a single page.
+ * Theme include to display the header. Inherits all available variables from the
+ * template context.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
  * can be found in the html.html.twig template in this directory.
@@ -43,60 +44,7 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container uikit-grid">
 
-  <div class="container">
-    <div class="row">
-      {% include '@dta_uikit_base/includes/header.html.twig' %}
-    </div>
-
-    <div class="row">
-      {{ page.primary_menu }}
-    </div>
-
-    <div class="row">
-      {{ page.secondary_menu }}
-    </div>
-
-    <div class="row">
-      {{ page.breadcrumb }}
-    </div>
-
-    <div class="row">
-      {{ page.highlighted }}
-    </div>
-
-    <div class="row">
-      {{ page.help }}
-    </div>
-  </div>
-
-  <main class="container" role="main">
-      <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-      <div class="row">
-        <div class="layout-content grids col-sm-12">
-          {{ page.content }}
-        </div>{# /.layout-content #}
-      </div>
-
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
+<header role="banner" class="uikit-header--light grids col-sm-12">
+  {{ page.header }}
+</header>

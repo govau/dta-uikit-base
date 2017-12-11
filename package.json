@@ -32,6 +32,7 @@
     "@gov.au/breadcrumbs": "^0.3.1",
     "@gov.au/core": "^0.1.3",
     "@gov.au/grid-12": "^0.1.1",
+    "@gov.au/header": "^1.2.0",
     "@gov.au/inpage-nav": "^0.3.0",
     "@gov.au/link-list": "^0.3.0",
     "@gov.au/skip-link": "^0.3.0"
