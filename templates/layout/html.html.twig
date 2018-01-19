@@ -31,14 +31,14 @@
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
-  <body {{ attributes.addClass('uikit-body') }}>
+  <body {{ attributes.addClass('au-grid') }}>
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
     #}
-    <nav class="uikit-skip-link">
-      <a class="uikit-skip-link__link" href="#content">Skip to main content</a>
-      <a class="uikit-skip-link__link" href="#nav">Skip to main navigation</a>
+    <nav class="au-skip-link">
+      <a class="au-skip-link__link" href="#content">Skip to main content</a>
+      <a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
     </nav>
     {{ page_top }}
     {{ page }}

@@ -22,12 +22,12 @@
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
 {% import _self as toc_api_tree %}
-{% set classes = ['toc', 'toc-tree', 'uikit-inpage-nav-links'] %}
+{% set classes = ['toc', 'toc-tree', 'au-inpage-nav-links'] %}
 
 <nav{{ attributes.addClass(classes) }}>
 
   {% if tree.title and not options.block %}
-    <h2 class="uikit-inpage-nav-links__heading uikit-display-2">{{ tree.title }}</h2>
+    <h2 class="au-inpage-nav-links__heading au-display-2">{{ tree.title }}</h2>
   {% endif %}
 
   {{ toc_api_tree.tree_links(tree) }}
@@ -38,9 +38,9 @@
   {% import _self as toc_api_tree %}
 
   {% if item.below_type %}
-    <ol class="{{ item.below_type }} uikit-link-list">
+    <ol class="{{ item.below_type }} au-link-list">
   {% else %}
-    <ul class="uikit-link-list">
+    <ul class="au-link-list">
   {% endif  %}
 
   {% for child_item in item.below %}

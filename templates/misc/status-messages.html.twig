@@ -25,8 +25,8 @@
 {% for type, messages in message_list %}
   {%
     set classes = [
-      'uikit-page-alerts',
-      'uikit-page-alerts--' ~ type,
+      'au-page-alerts',
+      'au-page-alerts--' ~ type,
       ]
   %}
   <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>

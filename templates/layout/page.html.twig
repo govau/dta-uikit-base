@@ -43,12 +43,11 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container uikit-grid">
+<div class="layout-container">
+
+  {% include '@dta_uikit_base/includes/header.html.twig' %}
 
   <div class="container">
-    <div class="row">
-      {% include '@dta_uikit_base/includes/header.html.twig' %}
-    </div>
 
     <div class="row">
       {{ page.primary_menu }}
@@ -75,7 +74,7 @@
       <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
 
       <div class="row">
-        <div class="layout-content grids col-sm-12">
+        <div class="layout-content grids col-sm-12 au-body">
           {{ page.content }}
         </div>{# /.layout-content #}
       </div>
