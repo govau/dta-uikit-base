@@ -43,6 +43,13 @@
  * @see html.html.twig
  */
 #}
+
+{% set main_classes = [
+    'container',
+    is_front ? 'page-front',
+  ]
+%}
+
 <div class="layout-container">
 
   {% include '@dta_uikit_base/includes/header.html.twig' %}
@@ -70,7 +77,7 @@
     </div>
   </div>
 
-  <main class="container" role="main">
+  <main{{ attributes.addClass(main_classes) }} role="main">
       <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
 
       <div class="row">
