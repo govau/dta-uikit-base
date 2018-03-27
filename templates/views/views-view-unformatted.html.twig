@@ -28,8 +28,8 @@
       default_row_class ? 'views-row',
     ]
   %}
-
-  {% if row_classes[0] != "" %}
+  {# Check whether the are any row classes set, or any row.attributes #}
+  {% if row_classes[0] != "" or row.attributes %}
     <div{{ row.attributes.addClass(row_classes) }}>
       {{ row.content }}
     </div>
