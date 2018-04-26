@@ -11,3 +11,22 @@ function dta_uikit_base_theme_suggestions_block_alter(&$suggestions, $variables)
     $suggestion = str_replace('stable_', 'dta_uikit_base_', $suggestion);
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+
+function dta_uikit_base_theme_suggestions_page_alter(&$suggestions, $variables, $hook) {
+  /**
+   * 404 template suggestion.
+   *
+   * From https://stackoverflow.com/a/49579500/1550345.
+   */
+  if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    if ($status_code == 403 || $status_code == 404) {
+      $suggestions[] = 'page__error';
+      $suggestions[] = 'page__error__' . (string) $status_code;
+    }
+  }
+}
