@@ -64,8 +64,7 @@ function dta_uikit_base_theme_suggestions_page_alter(&$suggestions, $variables, 
  */
 
 function dta_uikit_base_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
-  // If you want you can add a template suggestion for all views
-  // based on their ID:
+  // Adds theme suggestions to views.
 
   $id = $variables['view']->id();
   $display = $variables['view']->current_display;
@@ -73,4 +72,16 @@ function dta_uikit_base_theme_suggestions_views_view_alter(array &$suggestions, 
   $suggestions[] = 'views_view__' . (string) $id;
   $suggestions[] = 'views_view__' . (string) $display;
   $suggestions[] = 'views_view__' . (string) $id . '__' . (string) $display;
+}
+
+function dta_uikit_base_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+  // Adds theme suggestions to fieldsets using the ID of the element (if it exists).
+
+  $original = $variables['theme_hook_original'];
+
+  $id = (!empty($variables['element']['#id'])) ? str_replace('-','_', $variables['element']['#id']) : '';
+
+  if ($id) {
+    $suggestions[] = $original . '__' . (string) $id;
+  }
 }
