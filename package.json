@@ -1,26 +1,17 @@
 {
-  "name": "govcms8-ui",
-  "version": "1.0.0",
-  "description": "Base theme for govCMS8",
+  "name": "design-system-base-theme",
+  "version": "0.0.1",
+  "description": "Base theme for the Design System. Please note this is not useful by itself. It acts as a base theme for other themes to build upon.",
   "main": "gulpfile.js",
   "dependencies": {
-    "autoprefixer": "^7.2.3",
+    "autoprefixer": "^8.6.4",
     "node-sass": "^4.7.2",
-    "postcss-cli": "^4.1.1",
-    "@gov.au/body": "next",
-    "@gov.au/breadcrumbs": "next",
-    "@gov.au/core": "next",
-    "@gov.au/grid-12": "next",
-    "@gov.au/header": "next",
-    "@gov.au/inpage-nav": "next",
-    "@gov.au/link-list": "next",
-    "@gov.au/page-alerts": "next",
-    "@gov.au/skip-link": "next"
+    "postcss-cli": "^5.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "npm-run-all": "^4.1.2",
-    "onchange": "^3.3.0"
+    "onchange": "^4.0.0"
   },
   "scripts": {
     "build": "node-sass src/sass/dta-ui-kit-base.styles.scss css/dta-ui-kit-base.styles.css --source-map true",
@@ -31,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/govcms/govCMS8-ui.git"
+    "url": "git+https://github.com/govau/dta-uikit-base.git"
   },
-  "author": "govCMS",
+  "author": "Digital Transformation Agency",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/govcms/govCMS8-ui/issues"
+    "url": "https://github.com/govau/dta-uikit-base/issues"
   },
-  "homepage": "https://github.com/govcms/govCMS8-ui#readme",
+  "homepage": "https://github.com/govau/dta-uikit-base",
   "pancake": {
     "auto-save": true,
     "plugins": true,
