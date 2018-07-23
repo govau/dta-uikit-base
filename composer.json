@@ -1,0 +1,16 @@
+{
+  "name": "govau/dta-design-system-base-theme",
+  "homepage": "https://github.com/govau/dta-uikit-base",
+  "description": "A Drupal 8 base theme for dta.gov.au.",
+  "type": "drupal-theme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/govau/dta-uikit-base"
+  },
+  "keywords": [
+    "Drupal",
+    "theme",
+    "government"
+  ],
+  "license": "MIT"
+}
