@@ -1,5 +1,5 @@
 {
-  "name": "govau/dta-design-system-base-theme",
+  "name": "govau/dta-uikit-base",
   "homepage": "https://github.com/govau/dta-uikit-base",
   "description": "A Drupal 8 base theme for dta.gov.au.",
   "type": "drupal-custom-theme",
