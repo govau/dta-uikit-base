@@ -82,7 +82,6 @@ function dta_uikit_base_theme_suggestions_views_view_alter(array &$suggestions, 
 function dta_uikit_base_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
   // Adds theme suggestions to fieldsets using the ID of the element (if it exists), and the
   // ID of the parent form (for templating all the fieldsets in a form, for example).
-  kint($variables);
   $original = $variables['theme_hook_original'];
 
   $element = $variables['element'];
