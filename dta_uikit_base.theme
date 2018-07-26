@@ -80,13 +80,30 @@ function dta_uikit_base_theme_suggestions_views_view_alter(array &$suggestions, 
 }
 
 function dta_uikit_base_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
-  // Adds theme suggestions to fieldsets using the ID of the element (if it exists).
-
+  // Adds theme suggestions to fieldsets using the ID of the element (if it exists), and the
+  // ID of the parent form (for templating all the fieldsets in a form, for example).
+  kint($variables);
   $original = $variables['theme_hook_original'];
+
+  $element = $variables['element'];
+
+  if (isset($element['#attributes']['data-twig-suggestion'])) {
+    $suggestion_suffix = str_replace(['-'], '_', $element['#attributes']['data-twig-suggestion']);
+    $suggestions[] = $original . '__' . (string) $suggestion_suffix;
+  }
 
   $id = (!empty($variables['element']['#id'])) ? str_replace('-','_', $variables['element']['#id']) : '';
 
   if ($id) {
     $suggestions[] = $original . '__' . (string) $id;
   }
+}
+
+function dta_uikit_base_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Adds twig suggestions to elements of forms based on the form ID.
+  foreach (\Drupal\Core\Render\Element::children($form) as $key) {
+    $form[$key]['#attributes']['data-twig-suggestion'] = $form['#id'];
+  }
+
+  $form['actions']['submit']['#attributes']['data-twig-suggestion'] = $form['#id'];
 }
