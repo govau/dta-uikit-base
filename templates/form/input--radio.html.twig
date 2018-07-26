@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+ /**
+  * @TODO: Add templating to add the correct classes via a preprocess function.
+  * They need to be based on the eventual output of this, such as a button
+  * (.au-btn), or a text field (.au-text-input).
+#}
+
+{% set classes = ['au-control-input__input'] %}
+
+<input{{ attributes.addClass(classes) }} />{{ children }}
