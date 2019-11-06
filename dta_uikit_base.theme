@@ -8,10 +8,16 @@
  *
  **/
 
-// /* Turns the 'wrapped label' setting on for checkboxes. */
-// function dta_uikit_base_preprocess_input__checkbox(&$variables) {
-//  $variables['element']['#wrapped_label'] = TRUE;
-// }
+/* Alters the template for checkbox labels so it works properly. */
+function dta_uikit_base_preprocess_form_element(&$variables) {
+  if ($variables['element']['#type'] === 'checkbox' || $variables['element']['#type'] === 'radio' ){
+    $variables['label']['#theme'] = 'form_element_label__design_system';
+    $variables['title'] = $variables['element']['#title'];
+    $variables['element']['#design_system_label'] = TRUE;
+  }
+}
+
+
 //
 // /* Turns the 'wrapped label' setting on for radio buttons. */
 // function dta_uikit_base_preprocess_input__radio(&$variables) {
@@ -27,8 +33,12 @@ function dta_uikit_base_theme_suggestions_form_element_alter(array &$suggestions
   }
 }
 
-function dta_uikit_base_theme_suggestions_form_element_label_alter(array &$suggestions, array $variables) {
-  $suggestions[] = 'form_element_label';
+function dta_uikit_base_theme_suggestions_form_element_label__design_system_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['element']['#design_system_label'])) {
+    $suggestions[] = 'form_element_label__design_system';
+  } else {
+    $suggestions[] = 'form_element_label';
+  }
 }
 //
 // function dta_uikit_base_preprocess_form_element__wrapped(&$variables) {
