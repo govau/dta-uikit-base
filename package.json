@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^8.6.4",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "postcss-cli": "^5.0.1"
   },
   "devDependencies": {
