@@ -4,9 +4,9 @@
   "description": "Base theme for the Design System. Please note this is not useful by itself. It acts as a base theme for other themes to build upon.",
   "main": "gulpfile.js",
   "dependencies": {
-    "autoprefixer": "^8.6.4",
+    "autoprefixer": "^10.4.14",
     "node-sass": "^4.7.2",
-    "postcss-cli": "^5.0.1"
+    "postcss-cli": "^10.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",
